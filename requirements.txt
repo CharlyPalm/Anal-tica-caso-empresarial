@@ -8,4 +8,6 @@ python-dotenv
 tqdm
 typer
 matplotlib
+pandas
+streamlit
 -e .
