@@ -12,7 +12,7 @@ import requests
 #Función para cargar los datos ya limpios del archivo CSV
 def load_data():
     print("Cargando datos...")
-    df = pd.read_csv("data/raw/last_time_of_day.csv")
+    df = pd.read_csv("last_time_of_day.csv")
     print("Los datos se cargaron con éxito:", df.shape)
     
     # Preprocesamiento de los datos
