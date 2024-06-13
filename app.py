@@ -12,7 +12,7 @@ import requests
 #Función para cargar los datos ya limpios del archivo CSV
 def load_data():
     print("Cargando datos...")
-    df = pd.read_csv("data/raw/last_time_of_day.csv")
+    df = pd.read_csv("last_time_of_day.csv")
     print("Los datos se cargaron con éxito:", df.shape)
     
     # Preprocesamiento de los datos
@@ -97,7 +97,7 @@ def main():
     # Sidebar for about and user inputs
     st.sidebar.title("About")
     st.sidebar.info('Esta aplicación muestra los datos históricos de precios de Bitcoin desde un archivo CSV y predice precios futuros.\n\n')
-    st.sidebar.title("Model Training")
+    st.sidebar.title("Entrenar el modelo")
     if st.sidebar.button("Entrenar el modelo"):
         model, mse, r2 = train_model(data)
         st.write("El modelo ha sido entrenado con éxito!")
