@@ -38,8 +38,7 @@ def train_model(data):
     # Calcular el error cuadrático medio y el coeficiente de determinación
     mse = mean_squared_error(Y_test, Y_pred)
     r2 = r2_score(Y_test, Y_pred)
-    
-    
+
     
     return model, mse, r2
 
