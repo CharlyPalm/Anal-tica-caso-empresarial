@@ -39,14 +39,9 @@ def train_model(data):
     mse = mean_squared_error(Y_test, Y_pred)
     r2 = r2_score(Y_test, Y_pred)
     
-    # Graficar el modelo de regresión lineal
-    plt.scatter(Y_test, Y_pred)
-    plt.xlabel("Precio Real")
-    plt.ylabel("Precio Predicho")
-    plt.title("Precio Real vs Precio Predicho")
-    plt.show()
     
-    return model, mse, r2
+    
+    return model, mse, r2, y_test, y_pred
 
 # Función para predecir el precio de Bitcoin en una fecha específica
 def predict_price(model, input_date):
@@ -106,7 +101,13 @@ def main():
     st.sidebar.info('Esta aplicación muestra los datos históricos de precios de Bitcoin desde un archivo CSV y predice precios futuros.\n\n')
     st.sidebar.title("Entrenar el modelo")
     if st.sidebar.button("Entrenar el modelo"):
-        model, mse, r2 = train_model(data)
+        model, mse, r2, Y_test, Y_pred = train_model(data)
+    # Graficar el modelo de regresión lineal
+        plt.scatter(Y_test, Y_pred)
+        plt.xlabel("Precio Real")
+        plt.ylabel("Precio Predicho")
+        plt.title("Precio Real vs Precio Predicho")
+        plt.show()
 
         st.write("El modelo ha sido entrenado con éxito!")
         st.write(f"Mean Squared Error: {mse}")
