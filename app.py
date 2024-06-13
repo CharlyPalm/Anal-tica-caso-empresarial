@@ -104,11 +104,9 @@ def main():
         st.write(f"Mean Squared Error: {mse}")
         st.write(f"R^2 Score: {r2}")
 
-        #Mostrar la correlación entre las variables y el precio de cierre
-        st.write("Correlación entre las variables y el precio de cierre:")
-        st.write(data.corr()['close'])
-
         
+
+
 
     
     # User Inputs
