@@ -128,6 +128,8 @@ def main():
         api_key = "a19623fc2eb149859e6096bc0714fa93"  
         display_news(api_key)
 
+        #
+
 
 if __name__ == '__main__':
     main()
