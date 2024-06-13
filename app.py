@@ -1,5 +1,11 @@
 import pandas as pd
 import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import pydeck as pdk
+import pandas as pd
+import streamlit as st
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
@@ -129,3 +135,9 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+st.title("Hola Carlos Mundo")
+st.header("Esta es mi clase favorita \U0001F910 \U0001F52B")
+
+
+
