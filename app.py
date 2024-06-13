@@ -39,6 +39,13 @@ def train_model(data):
     mse = mean_squared_error(Y_test, Y_pred)
     r2 = r2_score(Y_test, Y_pred)
     
+    # Graficar el modelo de regresión lineal
+    plt.scatter(Y_test, Y_pred)
+    plt.xlabel("Precio Real")
+    plt.ylabel("Precio Predicho")
+    plt.title("Precio Real vs Precio Predicho")
+    plt.show()
+    
     return model, mse, r2
 
 # Función para predecir el precio de Bitcoin en una fecha específica
@@ -100,15 +107,12 @@ def main():
     st.sidebar.title("Entrenar el modelo")
     if st.sidebar.button("Entrenar el modelo"):
         model, mse, r2 = train_model(data)
+
         st.write("El modelo ha sido entrenado con éxito!")
         st.write(f"Mean Squared Error: {mse}")
         st.write(f"R^2 Score: {r2}")
 
         
-
-
-
-    
     # User Inputs
     st.sidebar.title("Menú")
     investment_date = st.sidebar.date_input("Seleccione una fecha de inversion")
