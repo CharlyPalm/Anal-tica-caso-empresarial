@@ -103,6 +103,11 @@ def main():
         st.write("El modelo ha sido entrenado con éxito!")
         st.write(f"Mean Squared Error: {mse}")
         st.write(f"R^2 Score: {r2}")
+
+        # sr.write para mostrar las correlaciones
+        st.write("Correlaciones:")
+        st.write(data.corr())
+        
     
     # User Inputs
     st.sidebar.title("Menú")
