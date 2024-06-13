@@ -102,7 +102,7 @@ def main():
     if st.sidebar.button("Entrenar el modelo"):
         model, mse, r2 = train_model(data)
         st.write("El modelo ha sido entrenado con éxito!")
-        st.write(f"Mean Squared Error: {mse}")
+        st.write(f"Mean Squared Error: round({mse})")
         st.write(f"R^2 Score: {r2}")
 
         
