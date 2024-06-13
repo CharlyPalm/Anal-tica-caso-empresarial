@@ -1,13 +1,7 @@
-black
-flake8
-isort
-loguru
-mkdocs
-pip
-python-dotenv
-tqdm
-typer
 matplotlib
+numpy
 pandas
-streamlit
--e .
+sklearn
+datetime
+plotly
+requests
