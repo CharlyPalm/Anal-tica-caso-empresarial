@@ -11,7 +11,7 @@ import requests
 
 def load_data():
     print("Loading data...")
-    df = pd.read_csv("data/raw/last_time_of_day.csv")
+    df = pd.read_csv("last_time_of_day.csv")
     print("Data loaded successfully:", df.shape)
     
     # Preprocess data if needed
