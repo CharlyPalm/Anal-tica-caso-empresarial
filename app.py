@@ -112,6 +112,7 @@ def main():
         plt.ylabel('Precio Predicho')
         plt.show()
         st.pyplot()
+        st.set_option('deprecation.showPyplotGlobalUse', False)
 
         
     # User Inputs
