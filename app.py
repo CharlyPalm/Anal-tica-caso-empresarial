@@ -104,6 +104,14 @@ def main():
         st.write("El modelo ha sido entrenado con éxito!")
         st.write(f"Mean Squared Error: {mse}")
         st.write(f"R^2 Score: {r2}")
+        # Impresión de la gráfica de regresión con los valores reales y predichos
+        st.write("Gráfico de regresión")
+        plt.scatter(model.predict(data[['date_ordinal', 'volume', 'quote_asset_volume', 'number_of_trades', 'taker_buy_base_asset_volume', 'taker_buy_quote_asset_volume']]), data['close'], color='black')
+        plt.title('Regresión Lineal')
+        plt.xlabel('Precio Real')
+        plt.ylabel('Precio Predicho')
+        plt.show()
+        st.pyplot()
 
         
     # User Inputs
